@@ -227,6 +227,25 @@ nav a.nav-item.hide {
   outline: none;
 }
 
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 .burger-item {
   -webkit-transition: all 0.3s ease-in 0.7s;
   transition: all 0.3s ease-in 0.7s;
