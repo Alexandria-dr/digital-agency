@@ -1,4 +1,153 @@
-@import url("_variables");
+@import "_variables";
 @import url("../css/normalize.css");
 
-@import url("_adaptive");
+html {
+  font-family: $montserrat;
+  background-color: yellowgreen;
+}
+
+nav,
+section,
+footer {
+  padding: 0 calc(50% - 800px);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  overflow: hidden;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+.nav__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 0 120px;
+  z-index: 10;
+}
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: white;
+  a {
+    @include navTransition(0.3s, 0.2s, 100%);
+  }
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  z-index: 10;
+  img {
+    height: 23px;
+    width: 26px;
+    margin-right: 40px;
+    @include navTransition(0.3s, 0.2s, 120%);
+  }
+  p {
+    color: $red-logo;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0;
+    @include navTransition(0.3s, 0.2s, 100%);
+  }
+}
+.nav__menu {
+  z-index: 10;
+  background-color: white;
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  li {
+    margin-left: 40px;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+}
+.nav__burger {
+  height: 370px;
+  position: fixed;
+  z-index: 8;
+  top: -370px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 85px 120px 30px;
+  font-size: 1.4rem;
+  transition: all 0.8s ease-in 0.2s;
+
+  &.active {
+    top: 0;
+    transition: all 0.8s ease-in 0s;
+  }
+}
+.burger__lists {
+  display: flex;
+  align-items: flex-end;
+}
+.burger__list {
+  margin-right: 120px;
+  margin-bottom: 0;
+  li {
+    margin: 10px 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.button {
+  cursor: pointer;
+}
+.burger__search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+  justify-content: space-between;
+  img {
+    width: 60px;
+    margin-bottom: 80px;
+    opacity: 1;
+    &.hide {
+      opacity: 0;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  input {
+    border: none;
+    text-align: end;
+    border-bottom: 1px solid gray;
+    font-size: 1.5rem;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+.burger-item {
+  transition: all 0.3s ease-in 0.7s;
+  transform: translateY(0);
+  &.hide {
+    transform: translateY(100%);
+    transition: all 0.3s ease-in 0s;
+  }
+}
+.header {
+  background: url(../img/header-bg.webp) no-repeat;
+}
+@import "_adaptive";

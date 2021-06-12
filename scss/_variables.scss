@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@mixin navTransition($dur, $del, $tranY) {
+  transition: all $dur ease-in $del;
+  &.nav-item {
+    transform: translateY(0);
+    &.hide {
+      transform: translateY($tranY);
+    }
+  }
+}
+
+$montserrat: "Montserrat", sans-serif;
+$red-logo: #f16464;
