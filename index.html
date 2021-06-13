@@ -5,62 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     <title>Digital agency</title>
   </head>
   <body>
     <nav>
       <div class="nav__container">
-        <div class="nav__logo">
-          <li><img class="nav-item" src="./img/logo.svg" alt="logo" /></li>
-          <li><p class="nav-item">BCoach</p></li>
-        </div>
-        <div class="nav__menu">
-          <ul>
-            <li><a class="nav-item" href="#">About us</a></li>
-            <li><a class="nav-item" href="#">Sign up</a></li>
-            <li><a class="nav-item" href="#">Contacts</a></li>
-            <li>
-              <img class="button" src="./img/burger.svg" alt="burger button" />
-            </li>
-          </ul>
+        <div class="nav__content">
+          <div class="nav__logo">
+            <li><img class="nav-item" src="./img/logo.svg" alt="logo" /></li>
+            <li><p class="nav-item">BCoach</p></li>
+          </div>
+          <div class="nav__menu">
+            <ul>
+              <li><a class="nav-item" href="#">About us</a></li>
+              <li><a class="nav-item" href="#">Sign up</a></li>
+              <li><a class="nav-item" href="#">Contacts</a></li>
+              <li>
+                <img
+                  class="button"
+                  src="./img/burger.svg"
+                  alt="burger button"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="nav__burger">
-        <div class="burger__lists">
-          <ul class="burger__list">
-            <li><a class="burger-item hide" href="#">Home</a></li>
-            <li><a class="burger-item hide" href="#">Portfolio</a></li>
-            <li><a class="burger-item hide" href="#">About Us</a></li>
-            <li><a class="burger-item hide" href="#">Services</a></li>
-            <li><a class="burger-item hide" href="#">Sing Up</a></li>
-          </ul>
-          <ul class="burger__list">
-            <li><a class="burger-item hide" href="#">Achievements</a></li>
-            <li><a class="burger-item hide" href="#">Scrapbook</a></li>
-            <li><a class="burger-item hide" href="#">Careers</a></li>
-            <li><a class="burger-item hide" href="#">Blog</a></li>
-            <li><a class="burger-item hide" href="#">Contacts</a></li>
-          </ul>
-        </div>
-        <div class="burger__search">
-          <li>
-            <img class="burger-item hide" src="./img/logo.svg" alt="logo" />
-          </li>
-          <li>
-            <input
-              class="burger-item hide"
-              type="search"
-              name="search-input"
-              id="search-input"
-              placeholder="Search"
-            />
-          </li>
-          <li>
-            <p class="burger-item hide">
-              <a href="#">info@digitalagency.com</a> <br />
-              +980-923-004-23
-            </p>
-          </li>
+        <div class="burger__container">
+          <div class="burger__lists">
+            <ul class="burger__list">
+              <li><a class="burger-item hide" href="#">Home</a></li>
+              <li><a class="burger-item hide" href="#">Portfolio</a></li>
+              <li><a class="burger-item hide" href="#">About Us</a></li>
+              <li><a class="burger-item hide" href="#">Services</a></li>
+              <li><a class="burger-item hide" href="#">Sing Up</a></li>
+            </ul>
+            <ul class="burger__list">
+              <li><a class="burger-item hide" href="#">Achievements</a></li>
+              <li><a class="burger-item hide" href="#">Scrapbook</a></li>
+              <li><a class="burger-item hide" href="#">Careers</a></li>
+              <li><a class="burger-item hide" href="#">Blog</a></li>
+              <li><a class="burger-item hide" href="#">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="burger__search">
+            <li>
+              <img class="burger-item hide" src="./img/logo.svg" alt="logo" />
+            </li>
+            <li>
+              <input
+                class="burger-item hide"
+                type="search"
+                name="search-input"
+                id="search-input"
+                placeholder="Search"
+              />
+            </li>
+            <li>
+              <p class="burger-item hide">
+                <a href="#">info@digitalagency.com</a> <br />
+                +980-923-004-23
+              </p>
+            </li>
+          </div>
         </div>
       </div>
     </nav>
@@ -72,6 +98,32 @@
           nesciunt. Ullam, animi! Ducimus nisi laudantium, a facilis earum
           suscipit dolores
         </p>
+      </div>
+      <div class="header__features">
+        <div class="header__item">
+          <h3>Future Vision</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            aliquid at perspiciatis quibusdam minus. Illo aliquid at piciatis
+            quibusdam minus.
+          </p>
+        </div>
+        <div class="header__item">
+          <h3>Product Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            aliquid at perspiciatis quibusdam minus. Illo aliquid at piciatis
+            quibusdam minus.
+          </p>
+        </div>
+        <div class="header__item">
+          <h3>Top Solutions</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            aliquid at perspiciatis quibusdam minus. Illo aliquid at piciatis
+            quibusdam minus.
+          </p>
+        </div>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>

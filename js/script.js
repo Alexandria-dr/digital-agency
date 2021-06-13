@@ -7,4 +7,5 @@ navButton.addEventListener('click', e =>{
         element.classList.toggle('hide')
     });
     document.querySelector('.nav__burger').classList.toggle('active')
+    document.querySelector('body').classList.toggle('lock')
 })
