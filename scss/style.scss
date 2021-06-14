@@ -1,6 +1,32 @@
 @import "_variables";
 @import url("../css/normalize.css");
 
+.box {
+  width: 60px;
+  height: 40px;
+  float: left;
+}
+#b6 {
+  background: #ffffff;
+}
+.icon {
+  stroke: #000000;
+  opacity: 0.95;
+}
+.icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  // fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+
 html {
   font-family: $montserrat;
   // background-color: yellowgreen;
@@ -75,6 +101,7 @@ nav {
   ul {
     display: flex;
     align-items: center;
+    margin: 10px 0;
   }
   li {
     margin-left: 40px;
@@ -274,6 +301,187 @@ input[type="search"]::-webkit-search-results-decoration {
       bottom: -10%;
       background-color: #c4c4c4;
     }
+  }
+}
+
+.ideas {
+  background: linear-gradient(to bottom, #c4c4c440 50%, #030a18ed 50%);
+}
+.ideas__container {
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px 0;
+}
+.ideas__title {
+  text-transform: uppercase;
+  max-width: 1100px;
+  h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+  p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 12%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 10%;
+      background-color: #fc0909;
+      left: 0;
+      top: 50%;
+    }
+  }
+}
+.ideas__items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 340px));
+  gap: 20px;
+  padding: 80px 0;
+}
+.ideas__item {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &:nth-child(3) {
+    background-color: #f01818;
+    color: white;
+    h3 {
+      margin: 0;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #2e2e2e;
+      bottom: -34px;
+      left: -10%;
+      width: 100%;
+      height: 160%;
+      z-index: -1;
+    }
+  }
+  &:last-child {
+    grid-row: 1/3;
+    grid-column: 3/4;
+    background-color: #e5e5e5;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #b91919;
+      top: -34px;
+      right: -10%;
+      width: 130%;
+      height: 70%;
+      z-index: -1;
+    }
+  }
+  &:nth-child(3),
+  &:last-child {
+    position: relative;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
+.benefit__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    position: relative;
+    background-color: white;
+    width: fit-content;
+    padding: 30px 10px;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 200vw;
+      top: 50%;
+      right: 0;
+      left: -150%;
+      background-color: black;
+      z-index: -1;
+    }
+  }
+}
+.benefit__items {
+  display: flex;
+  justify-content: space-between;
+}
+.benefit__item {
+  display: flex;
+  img {
+    position: relative;
+    top: -25px;
+    width: 70px;
+    height: 100%;
+  }
+}
+.benefit__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 70px;
+}
+.benefit__item_desc {
+  padding-left: 30px;
+  h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  p {
+    max-width: 340px;
+  }
+}
+.benefit__img {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  height: 100%;
+  position: relative;
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 300%;
+    top: 0;
+    left: 0;
+    right: -100%;
+    background: linear-gradient(
+      to bottom,
+      #c4c4c4 0%,
+      #c4c4c4 30%,
+      #e21919 30%,
+      #e21919 100%
+    );
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
   }
 }
 @import "_adaptive";
