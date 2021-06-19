@@ -1,3 +1,15 @@
+@media (min-width: 1000px) {
+  #b6 {
+    position: relative;
+    right: -25px;
+  }
+  .nav__menu li {
+    &:last-child {
+      overflow: visible;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   body.lock {
     overflow: hidden;
@@ -48,7 +60,7 @@
     max-width: 700px;
   }
   .gallery {
-    padding: 50px 0;
+    padding: 50px 0 70px;
   }
   .gallery__container {
     flex-direction: column;
@@ -81,6 +93,44 @@
     :nth-child(3),
     :last-child {
       border-top: none;
+    }
+  }
+  .features__container {
+    padding: 40px 20px;
+  }
+  .features__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features__item-img {
+    margin: 0 0 20px 0;
+    &::before {
+      width: 60%;
+      height: 60%;
+      bottom: -8%;
+      right: -10%;
+    }
+  }
+  .features__item {
+    &:nth-child(4) {
+      align-self: flex-start;
+    }
+    &:nth-child(5) {
+      grid-row: 3/4;
+      grid-column: 1/3;
+
+      img {
+        object-fit: cover;
+        height: 350px;
+        width: 350px;
+      }
+    }
+    &:nth-child(6) {
+      grid-column: 1/3;
+      padding-left: 0px;
+      a.btn {
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
     }
   }
 }
@@ -203,6 +253,17 @@
       }
     }
   }
+  .gallery {
+    padding-top: 40px;
+  }
+  .benefit__container {
+    h2 {
+      margin-top: 10px;
+    }
+  }
+  .header__features {
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -257,5 +318,46 @@
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+  .features {
+    background: linear-gradient(to bottom, #030a18eb 60%, #fff 60%);
+  }
+  .features__container {
+    padding: 30px 20px 40px;
+  }
+  .features__items {
+    grid-template-columns: 1fr;
+  }
+  .features__item {
+    &:nth-child(4) {
+      display: none;
+    }
+    &:nth-child(5) {
+      grid-row: 4/5;
+      grid-column: 1/2;
+      img {
+        object-fit: cover;
+        // max-height: 350px;
+        max-width: 100%;
+        // height: 100%;
+        // width: 100%;
+      }
+    }
+    &:nth-child(6) {
+      grid-column: 1/2;
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+  .features__item-img {
+    max-height: 350px;
+    margin: 0;
+    &::before {
+      content: none;
+    }
+  }
+  .features__item.white {
+    min-height: 200px;
   }
 }
