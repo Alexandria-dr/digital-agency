@@ -419,4 +419,17 @@
   .footer__container {
     padding: 40px 10px 20px;
   }
+  .signUp__wrapper {
+    .signUp__container {
+      padding: 20px 10px;
+    }
+    .signUp__content {
+      padding: 15px 0 30px;
+    }
+    .signUp__buttons {
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

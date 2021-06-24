@@ -42,13 +42,7 @@ navButton.addEventListener('click', e =>{
     document.querySelector('body').classList.toggle('lock')
     navAnimation()
 })
-// anim2.forEach(element => {
-//     if (element.closest("a")){
-//         element.addEventListener('click', e => {
-//             navButton.click();
-//         })
-//     }
-// });
+
 
 const nav = document.querySelector('nav')
 function toggleTopMenu (){
@@ -68,7 +62,7 @@ if (menuLinks.length > 0){
         const menuLink = e.target;
         if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
             const gotoBlock = document.querySelector(menuLink.dataset.goto)
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".nav__content").offsetHeight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".nav__content").offsetHeight + 20;
             if(menuLink.classList.contains("burger-item")){
                 navButton.click();
             }

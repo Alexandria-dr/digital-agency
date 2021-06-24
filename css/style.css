@@ -1080,6 +1080,148 @@ footer a:hover {
   padding: 40px 30px;
 }
 
+.signUp__wrapper .signUp__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.signUp__wrapper .signUp__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signUp__wrapper .signUp__header a:first-child {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+.signUp__wrapper .signUp__header a:first-child span {
+  margin-right: 20px;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.signUp__wrapper .signUp__header a:first-child:before {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 11px;
+  height: 4px;
+  width: 0px;
+  background-color: black;
+}
+
+.signUp__wrapper .signUp__header a:first-child:hover span {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.signUp__wrapper .signUp__header a:first-child:hover:before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 11px;
+  height: 4px;
+  width: 20px;
+  background-color: black;
+}
+
+.signUp__wrapper .signUp__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signUp__wrapper .signUp__buttons :first-child {
+  margin-bottom: 0;
+}
+
+.signUp__wrapper .signUp__buttons button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 15px 45px;
+  margin: 30px 10px;
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.71);
+  cursor: pointer;
+}
+
+.signUp__wrapper .signUp__buttons button:hover {
+  background-color: rgba(196, 196, 196, 0.18);
+}
+
+.signUp__wrapper .signUp__buttons button img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.signUp__wrapper .signUp__content {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signUp__wrapper .signUp__content a {
+  color: #303030;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a3a3a3)) var(--p, 0) 100%/var(--d, 0) 1px no-repeat;
+  background: linear-gradient(#a3a3a3 0 0) var(--p, 0) 100%/var(--d, 0) 1px no-repeat;
+  -webkit-transition: 0.3s, background-position 0s 0.3s;
+  transition: 0.3s, background-position 0s 0.3s;
+}
+
+.signUp__wrapper .signUp__content a:hover {
+  --d: 100%;
+  --p: 100%;
+}
+
+.signUp__wrapper .signUp__content h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.signUp__wrapper .signUp__content p {
+  max-width: 480px;
+}
+
 @media (min-width: 1000px) {
   #b6 {
     position: relative;
@@ -1532,6 +1674,15 @@ footer a:hover {
   }
   .footer__container {
     padding: 40px 10px 20px;
+  }
+  .signUp__wrapper .signUp__container {
+    padding: 20px 10px;
+  }
+  .signUp__wrapper .signUp__content {
+    padding: 15px 0 30px;
+  }
+  .signUp__wrapper .signUp__buttons button {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
