@@ -1678,6 +1678,10 @@ footer a:hover {
   .signUp__wrapper .signUp__container {
     padding: 20px 10px;
   }
+  .signUp__wrapper .signUp__header a:first-child:hover span {
+    -webkit-transform: none;
+            transform: none;
+  }
   .signUp__wrapper .signUp__content {
     padding: 15px 0 30px;
   }

@@ -423,6 +423,15 @@
     .signUp__container {
       padding: 20px 10px;
     }
+    .signUp__header {
+      a:first-child {
+        &:hover {
+          span {
+            transform: none;
+          }
+        }
+      }
+    }
     .signUp__content {
       padding: 15px 0 30px;
     }
