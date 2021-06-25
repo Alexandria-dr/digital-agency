@@ -1,3 +1,14 @@
+// import { gsap } from "../node_modules/gsap/";
+gsap.registerPlugin(ScrollTrigger);
+
+window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+
 const navButton = document.querySelector('#b6')
 const navItem = document.querySelectorAll('.nav-item, .burger-item')
 
@@ -77,31 +88,6 @@ if (menuLinks.length > 0){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let swiper = new Swiper(".mySwiper", {
     autoHeight: false,
     slidesPerView: 1,
@@ -133,3 +119,91 @@ let swiper = new Swiper(".mySwiper", {
         }
     }
   });
+
+
+
+
+
+  //gsap
+
+//   ScrollTrigger.defaults({
+//               markers:true
+//     })
+function hide(element) {
+        gsap.set(element, {opacity: 0, duration: 0.5});
+    }
+
+  let tl = gsap.timeline();
+  const mm = window.matchMedia('(min-width: 768px)')
+  const headerItem = document.querySelectorAll(".header__item")
+
+if (pageYOffset<30) {
+    if (mm.matches){
+        tl.fromTo(".header__title h1",{opacity:0,y:-100},{opacity:1,y:0,duration:1})
+          .fromTo(".header__title p",{opacity:0,y:-100},{opacity:1,y:0,duration:1},">-0.7")
+          .fromTo("nav",{opacity:0,y:-100},{opacity:1,y:0,duration:1.5},">-0.5")
+          .fromTo(".header__item",{opacity:0,y:-50,},{opacity:1,y:0,duration:1},">-1")
+          .fromTo(".header__item h3",{opacity:0,y:-50},{opacity:1,y:0,duration:1},">-0.9")
+          .fromTo(".header__item p",{opacity:0,y:-50},{opacity:1,y:0,duration:1},">-0.9")
+      } 
+      else{
+        tl.fromTo(".header__title h1",{opacity:0,y:-100},{opacity:1,y:0,duration:1})
+          .fromTo(".header__title p",{opacity:0,y:-100},{opacity:1,y:0,duration:1},">-0.5")
+          .fromTo("nav",{opacity:0,y:-100},{opacity:1,y:0,duration:1.5},">-0.5")
+
+        headerItem.forEach(function(element){
+            hide(element);
+            ScrollTrigger.create({
+              start: 'top-=100 bottom-=100',
+              end: 'bottom top',
+              trigger: element,
+              onEnter: function() {gsap.fromTo(element,{opacity:0},{opacity:1,duration:1})},
+              onLeaveBack: self => self.disable()
+            })})
+    }
+}
+
+
+const gsapItem = [".ideas__title h2",".ideas__title p",".benefit__container h2",".gallery__desc "]
+const gsapItemOpacity = [".mySwiper",".benefit__img",".facts h2",".facts__items",".ideas__items",".features__items"]
+const benefitItem = document.querySelectorAll(".benefit__item")
+
+gsapItem.forEach(function(element){
+    hide(element);
+    ScrollTrigger.create({
+      start: 'top-=100 bottom-=100',
+      end: 'bottom top',
+      trigger: element,
+      onEnter: function() {gsap.fromTo(element,{opacity:0,x:-100},{opacity:1,x:0,duration:1})},
+      onLeaveBack: self => self.disable()
+    })})
+
+benefitItem.forEach(function(element){
+    hide(element);
+    ScrollTrigger.create({
+      start: 'top-=100 bottom-=100',
+      end: 'bottom top',
+      trigger: element,
+      onEnter: function() {gsap.fromTo(element,{opacity:0,x:-100},{opacity:1,x:0,duration:1})},
+      onLeaveBack: self => self.disable()
+    })})
+
+gsapItem.forEach(function(element){
+    hide(element);
+    ScrollTrigger.create({
+      start: 'top-=100 bottom-=100',
+      end: 'bottom top',
+      trigger: element,
+      onEnter: function() {gsap.fromTo(element,{opacity:0,x:-100},{opacity:1,x:0,duration:1})},
+      onLeaveBack: self => self.disable()
+    })})
+
+gsapItemOpacity .forEach(function(element){
+    hide(element);
+    ScrollTrigger.create({
+      start: 'top-=100 bottom-=100',
+      end: 'bottom top',
+      trigger: element,
+      onEnter: function() {gsap.fromTo(element,{opacity:0},{opacity:1,duration:1.5})},
+      onLeaveBack: self => self.disable()
+    })})

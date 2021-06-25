@@ -294,6 +294,23 @@
   .footer__container {
     padding: 40px 20px;
   }
+  .signUp__wrapper {
+    .signUp__header {
+      a:first-child {
+        &:hover {
+          span {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .signUp__buttons {
+      button {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -423,15 +440,15 @@
     .signUp__container {
       padding: 20px 10px;
     }
-    .signUp__header {
-      a:first-child {
-        &:hover {
-          span {
-            transform: none;
-          }
-        }
-      }
-    }
+    // .signUp__header {
+    //   a:first-child {
+    //     &:hover {
+    //       span {
+    //         transform: none;
+    //       }
+    //     }
+    //   }
+    // }
     .signUp__content {
       padding: 15px 0 30px;
     }
