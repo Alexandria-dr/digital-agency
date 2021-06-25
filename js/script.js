@@ -186,12 +186,12 @@ if (pageYOffset < 30) {
         { opacity: 1, y: 0, duration: 1 },
         ">-0.5"
       )
-      .fromTo(
-        "nav",
-        { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 1.5 },
-        ">-0.5"
-      );
+    //   .fromTo(
+    //     "nav",
+    //     { opacity: 0, y: -100 },
+    //     { opacity: 1, y: 0, duration: 1.5 },
+    //     ">-0.5"
+    //   );
 
     headerItem.forEach(function (element) {
       hide(element);
