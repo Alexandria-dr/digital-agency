@@ -242,23 +242,25 @@ gsapItem.forEach(function (element) {
 });
 let x = 0.2;
 benefitItem.forEach(function (element) {
-  hide(element);
+  hide(element);})
   ScrollTrigger.create({
     start: "top-=100 bottom-=100",
     end: "bottom top",
     trigger:".benefit__list",
+    markers: true,
     onEnter: function () {
-      tl.fromTo(
-        element,
-        { opacity: 0, x: -100 },
-        { opacity: 1, x: 0, duration:1 }, x
-      );
-      x+=0.2
-      console.log(x);
-    },
+      benefitItem.forEach(element => {
+  
+        tl.fromTo( element,
+          { opacity: 0, x: -100 },
+          { opacity: 1, x: 0, duration:1 }, x
+        );
+        x+=0.2
+        console.log(x);
+      })},
+    
     onLeaveBack: (self) => {self.disable(); x=0},
   });
-});
 
 gsapItem.forEach(function (element) {
   hide(element);
