@@ -241,6 +241,7 @@ gsapItem.forEach(function (element) {
   });
 });
 let x = 0.2;
+let tl2 = gsap.timeline()
 benefitItem.forEach(function (element) {
   hide(element);})
   ScrollTrigger.create({
@@ -251,7 +252,7 @@ benefitItem.forEach(function (element) {
     onEnter: function () {
       benefitItem.forEach(element => {
   
-        tl.fromTo( element,
+        tl2.fromTo( element,
           { opacity: 0, x: -100 },
           { opacity: 1, x: 0, duration:1 }, x
         );
