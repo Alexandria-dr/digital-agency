@@ -248,7 +248,6 @@ benefitItem.forEach(function (element) {
     start: "top-=100 bottom-=100",
     end: "bottom top",
     trigger:".benefit__list",
-    markers: true,
     onEnter: function () {
       benefitItem.forEach(element => {
   
