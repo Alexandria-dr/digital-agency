@@ -147,12 +147,12 @@ if (pageYOffset < 30) {
     tl.fromTo(
       ".header__title h1",
       { opacity: 0, y: -100 },
-      { opacity: 1, y: 0, duration: 1.5 }
+      { opacity: 1, y: 0, delay:0.3, duration: 1.2 }
     )
       .fromTo(
         ".header__title p",
         { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 1.5 },
+        { opacity: 1, y: 0, duration: 1.2 },
         ">-0.7"
       )
         // .fromTo("nav",{opacity:0,y:-100},{opacity:1,y:0,duration:1.5},">-0.5")
@@ -160,7 +160,7 @@ if (pageYOffset < 30) {
         ".header__item",
         { opacity: 0, y: -50 },
         { opacity: 1, y: 0, duration: 1 },
-        ">-1"
+        ">-0.6"
       )
       .fromTo(
         ".header__item h3",
@@ -178,12 +178,12 @@ if (pageYOffset < 30) {
     tl.fromTo(
       ".header__title h1",
       { opacity: 0, y: -100 },
-      { opacity: 1, y: 0, duration: 1 }
+      { opacity: 1, y: 0, delay:0.3, duration: 1.2 }
     )
       .fromTo(
         ".header__title p",
         { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 1 },
+        { opacity: 1, y: 0, duration: 1.2 },
         ">-0.5"
       )
     //   .fromTo(
