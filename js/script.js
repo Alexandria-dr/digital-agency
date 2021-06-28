@@ -147,12 +147,12 @@ if (pageYOffset < 30) {
     tl.fromTo(
       ".header__title h1",
       { opacity: 0, y: -100 },
-      { opacity: 1, y: 0, duration: 1 }
+      { opacity: 1, y: 0, duration: 1.5 }
     )
       .fromTo(
         ".header__title p",
         { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 1 },
+        { opacity: 1, y: 0, duration: 1.5 },
         ">-0.7"
       )
         // .fromTo("nav",{opacity:0,y:-100},{opacity:1,y:0,duration:1.5},">-0.5")
@@ -240,21 +240,23 @@ gsapItem.forEach(function (element) {
     onLeaveBack: (self) => self.disable(),
   });
 });
-
+let x = 0.2;
 benefitItem.forEach(function (element) {
   hide(element);
   ScrollTrigger.create({
     start: "top-=100 bottom-=100",
     end: "bottom top",
-    trigger: element,
+    trigger:".benefit__list",
     onEnter: function () {
-      gsap.fromTo(
+      tl.fromTo(
         element,
         { opacity: 0, x: -100 },
-        { opacity: 1, x: 0, duration: 1 }
+        { opacity: 1, x: 0, duration:1 }, x
       );
+      x+=0.2
+      console.log(x);
     },
-    onLeaveBack: (self) => self.disable(),
+    onLeaveBack: (self) => {self.disable(); x=0},
   });
 });
 
