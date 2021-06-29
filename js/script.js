@@ -209,8 +209,6 @@ if (pageYOffset < 30) {
 }
 
 const gsapItem = [
-  ".ideas__title h2",
-  ".ideas__title p",
   ".benefit__container h2",
   ".gallery__desc ",
 ];
@@ -240,6 +238,7 @@ gsapItem.forEach(function (element) {
     onLeaveBack: (self) => self.disable(),
   });
 });
+
 let x = 0.2;
 let tl2 = gsap.timeline()
 benefitItem.forEach(function (element) {
@@ -256,11 +255,32 @@ benefitItem.forEach(function (element) {
           { opacity: 1, x: 0, duration:1 }, x
         );
         x+=0.2
-        console.log(x);
       })},
     
-    onLeaveBack: (self) => {self.disable(); x=0},
+    onLeaveBack: (self) => {self.disable()},
   });
+
+const ideasTitle = [".ideas__title h2", ".ideas__title p"]
+let tl3 = gsap.timeline()
+ideasTitle.forEach(function (element) {
+  hide(element);})
+  ScrollTrigger.create({
+    start: "top-=100 bottom-=100",
+    end: "bottom top",
+    trigger:".ideas__title",
+    onEnter: function () {
+      ideasTitle.forEach(element => {
+  
+        tl3.fromTo( element,
+          { opacity: 0, x: -100 },
+          { opacity: 1, x: 0,  duration:1 }, x
+        );
+        x+=0.3
+      })},
+    
+    onLeaveBack: (self) => {self.disable()},
+  });
+
 
 gsapItem.forEach(function (element) {
   hide(element);

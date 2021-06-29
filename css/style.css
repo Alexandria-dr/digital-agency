@@ -1278,38 +1278,6 @@ footer a:hover {
   z-index: 1001;
 }
 
-.preloader__row {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  margin-left: -35px;
-  text-align: center;
-  -webkit-animation: preloader-rotate 2s infinite linear;
-          animation: preloader-rotate 2s infinite linear;
-}
-
-.preloader__item {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  background-color: #337ab7;
-  border-radius: 100%;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
-          animation: preloader-bounce 2s infinite ease-in-out;
-}
-
-.preloader__item:last-child {
-  top: auto;
-  bottom: 0;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-}
-
 .loaded_hiding .preloader {
   -webkit-transition: 0.3s opacity;
   transition: 0.3s opacity;
@@ -1318,6 +1286,10 @@ footer a:hover {
 
 .loaded .preloader {
   display: none;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 @-webkit-keyframes preloader-rotate {
@@ -1691,11 +1663,14 @@ footer a:hover {
   .signUp__wrapper .signUp__buttons button {
     font-size: 1.5rem;
   }
+  .ideas__container {
+    padding: 25px 40px 0;
+  }
 }
 
 @media (max-width: 500px) {
   .ideas__container {
-    padding: 40px 20px 0;
+    padding: 25px 20px 0;
   }
   .ideas__items {
     -ms-grid-columns: minmax(150px, 340px);

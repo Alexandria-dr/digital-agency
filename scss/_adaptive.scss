@@ -311,11 +311,14 @@
       }
     }
   }
+  .ideas__container {
+    padding: 25px 40px 0;
+  }
 }
 
 @media (max-width: 500px) {
   .ideas__container {
-    padding: 40px 20px 0;
+    padding: 25px 20px 0;
   }
   .ideas__items {
     grid-template-columns: minmax(150px, 340px);
